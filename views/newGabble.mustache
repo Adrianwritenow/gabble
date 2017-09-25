@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>Profile page</title>
+</head>
+<body>
+  <h1>Hello {{currentUser.username}} </h1>
+  <a href ='/gabble'><p>Gabbles</p></a>
+  <form action="/newGabble" method="POST">
+    <input type = 'text', name='title' placeholder=" What you Gabbin About?">
+    <input type="text" name='message' placeholder="Gabb Away">
+    <button>Gabb</button>
+  </form>
+</body>
+</html>
