@@ -88,6 +88,7 @@ app.post('/newGabble', function(request, response) {
   let current_date = new Date();
   client.query('INSERT INTO messages (title, body, user_id, messageTime) VALUES($1, $2, $3, $4)', [request.body.title, request.body.message, request.session.passport.user, current_date], (err, results) => {
     if (err) {
+      response.redirect('/');
       return next(err);
     } else {
       response.redirect('/gabble');
@@ -122,6 +123,7 @@ app.get('/gabble', function(request, response) {
   client.query('SELECT * FROM users LEFT JOIN messages ON messages.user_id = users.id WHERE body !=$1', [" "], function(err, dbResponse) {
     if (err) {
       console.log(err);
+      response.redirect('/');
     } else {
         dbResponse.rows.forEach(message => {
           if (message.user_id === request.session.passport.user) {

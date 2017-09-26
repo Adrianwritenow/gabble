@@ -1,3 +1,55 @@
 .msgPost{
   border: 1px solid grey;
+  width: 400px;
+  overflow: auto;
+  text-align: center;
+  box-shadow: 10px 10px 5px #888888;
+  margin-top: 20px;
+
+}
+
+.deleteBtn{
+  background-color: red;
+  width:89px;
+  border: none;
+
+}
+
+.likeBtn{
+  width:89px;
+  background-color: blue;
+  border: none;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.msgBlock{
+  text-align: center;
+}
+.navBar{
+  display: flex;
+  justify-content: space-around;
+}
+
+.newGabble{
+  display: flex;
+  justify-content: center;
+}
+
+.newGabble input{
+  margin-left: 10px;
+
+}
+
+.msgPost h1{
+  margin-top: 10px;
 }

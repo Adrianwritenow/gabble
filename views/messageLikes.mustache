@@ -6,7 +6,14 @@
   <title>user Likes page</title>
 </head>
 <body>
-  <h1>likes</h1>
+  <div class="navBar">
+    <a href="/newGabble">New Gabble</a>
+    <a href="/gabble">Gabbles</a>
+    <form method="POST" action="/logout">
+      <button>Log Out</button>
+    </form>
+    </div>
+  <h1>These Users Like Your Post</h1>
   {{ #likes}}
       <div class = 'like'>
         <h3>{{username}}<h3>

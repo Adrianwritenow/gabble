@@ -7,11 +7,16 @@
   <title>Profile page</title>
 </head>
 <body>
+  <div class="navBar">
+    <a href="/newGabble">New Gabble</a>
+    <a href="/gabble">Gabbles</a>
+    <form method="POST" action="/logout">
+      <button>Log Out</button>
+    </form>  </div>
   <h1>Hello {{currentUser.username}} </h1>
-  <a href ='/gabble'><p>Gabbles</p></a>
-  <form action="/newGabble" method="POST">
-    <input type = 'text', name='title' placeholder=" What you Gabbin About?">
-    <input type="text" name='message' placeholder="Gabb Away">
+  <form  class="newGabble" action="/newGabble" method="POST">
+    <input type = 'text', name='title' placeholder=" Gabb About?">
+    <input type="text" name='message' placeholder="Gabb Away!">
     <button>Gabb</button>
   </form>
 </body>
